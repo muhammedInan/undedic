@@ -12,13 +12,11 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
- * @ApiResource()
+ * 
  * @ORM\Entity(repositoryClass=DepartmentRepository::class)
- * @ApiFilter(SearchFilter::class, students={"firstName","lastName","numEtud"})
- * attributes={
+ * @ApiResource(
  *  normalizationContext={
- *  "groups"={"departments_read"} 
- * }}
+ *  "groups"={"departments_read"}}
  * )
  */
 class Department

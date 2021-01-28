@@ -11,10 +11,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ORM\HasLifecycleCallbacks
  * @ORM\Entity(repositoryClass=StudentRepository::class)
  * @ApiResource(
- *  attributes={
  *  normalizationContext={
- *  "groups"={"students_read"} 
- * }}
+ *  "groups"={"students_read"}}
  * )
  */
 class Student
