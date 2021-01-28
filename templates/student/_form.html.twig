@@ -1,4 +1,17 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+{{ form_start(formStudent) }}
+
+    <div class="form-group">
+        <label for="">Prénom</label>
+        {{ form_widget(formStudent.firstName) }}
+    </div>
+    
+    <div class="form-group">
+        <label for="">nom</label>
+    {{ form_widget(formStudent.lastName) }}
+</div>
+
+    <div class="form-group">
+        <label for="">numero étudiant</label>
+    {{ form_widget(formStudent.numEtud) }}
+    </div>
+{{ form_end(formStudent) }}

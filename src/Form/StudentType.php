@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class StudentType extends AbstractType
@@ -15,12 +16,23 @@ class StudentType extends AbstractType
     {
         $builder
             ->add('firstName', TextType::class, [
-
+                'attr' => [
+                    'placeholder' => "Prénom",
+                    'class'=> 'form-control'
+                ]
                 ])
             ->add('lastName', TextType::class, [
-
+                'attr' => [
+                    'placeholder' => "nom",
+                    'class'=> 'form-control'
+                ]
                 ])
-            ->add('numEtud')
+            ->add('numEtud', NumberType::class, [
+                'attr' => [
+                    'placeholder' => "numero",
+                    'class'=> 'form-control'
+                ]
+                ])
             ->add('appliquer', SubmitType::class)
         ;
     }
